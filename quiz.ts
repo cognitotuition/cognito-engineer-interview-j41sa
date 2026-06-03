@@ -36,7 +36,7 @@ const allQuestions: Question[] = [ // Many questions, each tagged with one or mo
   },
 ];
 
-const generate = (topics: TopicKey[], studentIdsInLesson: string[]): Question[] => {
+const generateQuestions = (topics: TopicKey[], studentIdsInLesson: string[]): Question[] => {
   const candidates = allQuestions.filter((question) =>
     question.topics.some((topic) => topics.includes(topic))
   );
