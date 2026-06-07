@@ -41,7 +41,7 @@ const generateQuestions = (topics: TopicKey[], studentIdsInLesson: string[]): Qu
     question.topics.some((topic) => topics.includes(topic))
   );
 
-  // Math.random() - 0.5 shuffles the away randomly, as it randomly outputs a negative or positive number.
+  // Math.random() - 0.5 shuffles the array randomly, as it randomly outputs a negative or positive number.
   return [...candidates].sort(() => Math.random() - 0.5).slice(0, 3);
 };
 
