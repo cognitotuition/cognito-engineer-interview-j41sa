@@ -44,11 +44,3 @@ const generateQuestions = (topics: TopicKey[], studentIdsInLesson: string[]): Qu
   // Math.random() - 0.5 shuffles the array randomly, as it randomly outputs a negative or positive number.
   return [...candidates].sort(() => Math.random() - 0.5).slice(0, 3);
 };
-
-const generateQuestionWithAI = (topics: TopicKey[]) => {
-  const response = prompt(`Generate 3 quiz questions covering these topics: ${topics.join(', ')} 
-  in the format of a JSON array of Question objects. A Question object has the following properties: 
-  question (string), solution (string), mark (number), topics (array of topic keys).`);
-
-  return response;
-};
